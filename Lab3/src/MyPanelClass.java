@@ -28,8 +28,12 @@ public class MyPanelClass extends JPanel {
                         g.fillRect(x1, y1, width+1, height+1);
                         
                         //Draw a border
-//                        g.setColor(Color.YELLOW);
-//                        g.drawRect(x1,y1,width,height);
+                        g.setColor(Color.BLACK);
+                        g.drawRect(x1+10,y1+10,x1+210,y1+140);
+                        g.setColor(Color.RED);
+                        g.fillRect(x1+10, y1+10, x1+210, y1+140);
+                        
+                       
 //                        
 //                        //Draw inside border
 //                        g.setColor(Color.CYAN);
@@ -58,6 +62,22 @@ public class MyPanelClass extends JPanel {
 //                        g.setColor(Color.YELLOW);
 //                        g.fillPolygon(p);
                         
+                        //Draw Puerto Rican Flag components
+                                                
+                        //Draw white lines
+                        g.setColor(Color.white);
+                        g.fillRect(x1+10, y1+38, x1+210, 28);
+                        g.fillRect(x1+10, y1+94, x1+210, 28);
+                        
+                        //Draw blue triangle
+                        Polygon p1= new Polygon();
+                        p1.addPoint(x1+10,y1+10);
+                        p1.addPoint(x1+115,y1+80);
+                        p1.addPoint(x1+10, y1+150);
+                        g.setColor(Color.BLUE);
+                       	g.fillPolygon(p1);
+                        
+                       	//Draw white star
                         Polygon p2 = new Polygon();
                         p2.addPoint(x1 + 25, y1 + 73);
                         p2.addPoint(x1 + 41, y1 + 73);
@@ -70,6 +90,6 @@ public class MyPanelClass extends JPanel {
                         p2.addPoint(x1 + 34, y1 + 98);
                         p2.addPoint(x1 + 38, y1 + 83);
                         g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
+                        g.fillPolygon(p2);
             }
 }
